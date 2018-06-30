@@ -1,9 +1,13 @@
 @charset "utf-8";
 /* ヘッダー */
+body{
+ margin:0px;
+ background-color: #1b244b;
+}
  #header {
    position: fixed; /* 画面をスクロールしてもヘッダーを常に上部固定 */
    width: 100%; /* 横幅を画面一杯に設定 */
-   height: 46px; /* ヘッダーの高さを設定 */
+   height: 50px; /* ヘッダーの高さを設定 */
    background-color: #242830;
    border-bottom: solid 1px black; /* ヘッダーの下に1ピクセルの実線を設定 */
  }
@@ -47,7 +51,10 @@
 
  a:hover  {  /* hoverはマウスを乗せたときの設定 */
    color: #cd4730; /* リンクテキストを赤色に設定 */
-   text-decoration: underline; /* テキストに下線が表示されないように設定 */
+   text-decoration: none; /* テキストに下線が表示されないように設定 */
+ }
+ a:visited {
+  color:#006DD9;
  }
  /* メインパネル */
  #main_panel {
@@ -79,7 +86,13 @@
    line-height: 2.0em; /* 上下に半行余白の段落の高さを設定 */
    color: white; /* フォントの色を白に設定 */
  }
-
+ 
+#main_container{ /*自作コンテイナーじゃー*/
+ width: 1280px;
+ height: auto;
+ margin-bottom: 10px;
+ background-color: white;
+}
 
  #main_panelArea p{
    color: #FFF; /* フォントテキストに白色を設定します */
@@ -156,6 +169,9 @@ div.content {
  color: #a1a9b0;
  text-decoration: none;
 }
+.footer li a:visited{
+ color:#8c9398;
+}
 ul {
 	list-style-type: none;
 	margin: 20px auto;
@@ -191,4 +207,43 @@ ul {
     text-align: center;
     padding:20px 0;
     color: black;
+}
+/*ページトップスクロール*/
+#pagetop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom:20px;
+    margin: 0px;
+    display: block;
+    
+}
+#pagetop a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    /*width: 100px;*/
+    padding: 20px 10px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+}
+#pagetop a:hover {
+    text-decoration: none;
+    background: #999;
+    display: block;
+}
+/*ここまで*/
+
+/*カウントボックス*/
+.countbox{
+ position: fixed;
+ top: 15px;
+ right: 20px;
+ color: white;
+ font-size: 12px;
 }

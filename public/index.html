@@ -7,13 +7,30 @@
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300" rel="stylesheet" type="text/css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+  var pagetop = $('#pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
 </head>
 <body>
    <!-- ヘッダーここから -->
   <div id="header">
   <div id="headerArea">
     <div id="header_logo"><a style="color:#8c9398;,text-decoration:none" href="index.html">My portfolio</a></div>
-     
       <!-- グローバルナビゲーションここから -->
     <div id="gnavi">
       <ul>
@@ -22,6 +39,9 @@
         <li><a href="https://qiita.com/shiroux" target="_blank">Blog</a></li>
         <li><a href="mailto:summerdream0715@gmail.com">Contact</a></li>
       </ul>
+    </div>
+    <div class="countbox">
+      <div id="count">秒経過</div>
     </div>
     <!-- グローバルナビゲーションここまで -->
   </div>
@@ -33,41 +53,9 @@
     <p>An apprentice Front-end Engineer</p>
   </div>
   </div>
-  <div class="content_g clearfix">
-    <div class="content_gArea">
-      <div class="main">
-
-      <h2></h2>
-
-      <p><br />
-      <span class="red bold"></span></p>
-
-      <p><span class="red bold"></span>
-      
-      <span class="red bold"></span></p>
-    </div>
-    <div class="side">
-      <img src="img/pict1.jpg" alt="Samurai Engineer School">
-    </div>
-    </div>
-    </div>
- <div class="content clearfix">
-  <div class="contentArea">
-    <div class="main">
-      <h2></h2>
-      <p><br />
-      <span class="red bold"></span>
-      <span class="red bold"></span></p>
-      <p><br />
-     <br />
-      <br />
-      </p>
-    </div>
- <div class="side">
-      <img src="img/pict2.jpg" alt="Samurai Engineer School">
-    </div>
-  </div>
-  </div>
+<div id="main_container">
+  <p>表示できていますか？</p>
+</div>
     <div class="footer">
     <div class="container">
       <ul class="inline-block">
@@ -79,6 +67,15 @@
           All Rights Reserved.</p>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <p id="pagetop"><a href="#main_panelArea">TOP</a></p>
+  
+<script>
+var i= 1;
+var countup=function(){
+  var x = i++;
+  var count=document.getElementById('count').innerHTML=Math.floor(x/60)+"分"+(x%60)+"秒経過";
+};
+  setInterval(countup, 1000);
+</script>
 </body>
 </html>
