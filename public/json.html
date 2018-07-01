@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+     <meta charset="utf-8">
+    <style>
+        body{
+            background:white;
+        }
+         .dataList h1{
+            text-align:center;
+        }
+        .dataList{
+            float:left;
+            font-size:14px;
+            color:#8c9398;
+        }
+        .button{
+            float:clear;
+            background-color: #e7e7e7; 
+            border: none;
+            color: black;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            margin: 2px 2px;
+            cursor: pointer;
+            border-radius:5px;
+        }
+    </style>
+</head>
+   <body>
+       <div class="dataList">
+           <p>FF零式　登場人物</p>
+           <input type="button" class="button" value="表示">
+       </div>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(function () {
+     var isCliked=false;
+    $('.button').click(function () {
+        if(isCliked==true){
+            return;
+         }
+        isCliked=true;
+    //Modern Writing Style Start--
+    $.ajax({
+	url: 'json/data.json',
+	dataType: 'json',
+	data: {name: 'chara'},
+	}).done(function(data){
+	//Modern Writing Style --End
+	
+    // $.getJSON("json/data.json", {name: "chara"}, function(data){
+    
+	var dataArray = data.charas;
+    // 	$.each(dataArray, function(i){
+    // $(".dataList").append("<p>id: " + dataArray[i].id + "　Character: " + dataArray[i].chara + "　　(CV: " + dataArray[i].cv + ")</p>");
+    // 	});
+    // for loop 
+    for(var i=0; i<data.charas.length;i++){
+        $(".dataList").append("<p>id: " + dataArray[i].id + "　Character: " + dataArray[i].chara + "　　(CV: " + dataArray[i].cv + ")</p>");
+    }
+// });
+});
+});
+});
+</script>
+   </body>
+</html>

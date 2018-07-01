@@ -1,0 +1,74 @@
+{
+  "charas":[
+    {
+      "id": 1,
+      "chara":"Ace",
+      "cv":"梶 裕貴"
+    },
+    {
+      "id": 2,
+      "chara":"Deuce",
+      "cv":"花澤 香菜"
+    },
+    {
+      "id": 3,
+      "chara":"Trey",
+      "cv":"中村悠一"
+    },
+    {
+      "id": 4,
+      "chara":"Cater",
+      "cv":"茅原 実里"
+    },
+    {
+      "id": 5,
+      "chara":"Cinque",
+      "cv":"豊崎 愛生"
+    },
+    {
+      "id": 6,
+      "chara":"Sice",
+      "cv":"沢城 みゆき"
+    },
+    {
+      "id": 7,
+      "chara":"Seven",
+      "cv":"青木 まゆこ"
+    },
+    {
+      "id": 8,
+      "chara":"Eight",
+      "cv":"入野 自由"
+    },
+    {
+      "id": 9,
+      "chara":"Nine",
+      "cv":"小野 大輔"
+    },
+    {
+      "id": 10,
+      "chara":"Jack",
+      "cv":"鈴村 健一"
+    },
+    {
+      "id": 11,
+      "chara":"Queen",
+      "cv":"小清水 亜美"
+    }, 
+    {
+      "id": 12,
+      "chara":"King",
+      "cv":"杉田 智和"
+    }, 
+    {
+      "id": 13,
+      "chara":"Machina Kunagir",
+      "cv":"神谷 浩史"
+    }, 
+    {
+      "id": 14,
+      "chara":"Rem Tokimiya",
+      "cv":"白石 涼子"
+    }
+  ]
+}
