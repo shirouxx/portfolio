@@ -76,19 +76,15 @@
               </div>
               <p id="pagetop"><a href="content_gArea">TOP</a></p>
   <script>
-    function initMap() {
-  //解説2：変数
-  var mapPosition = {lat: 33.865340, lng:  130.792815};
-
-  var mapArea = document.getElementById('maps');
-  var mapOptions = {
-    center: mapPosition,
-    zoom: 16,
-  };
-
-  //解説1：マップを生成するMapクラス
-  var map = new google.maps.Map(mapArea, mapOptions);
-}
+  function initMap() {
+      var mapPosition = {lat: 33.865340, lng: 130.792815};
+      var mapArea = document.getElementById('maps');
+      var mapOptions = {
+        center: mapPosition,
+        zoom: 16,
+      };
+      var map = new google.maps.Map(mapArea, mapOptions);
+    }
   </script>
  </body>
  </html>
