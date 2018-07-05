@@ -7,6 +7,9 @@
         body{
             background:white;
         }
+        h1{
+            font-size:16px;
+        }
         .dataList{
             float:left;
             font-size:14px;
@@ -25,22 +28,19 @@
             cursor: pointer;
             border-radius:5px;
         }
+        p{
+            display:none;
+        }
     </style>
 </head>
    <body>
        <div class="dataList">
-           <p>FF零式　登場人物</p>
+           <h1>FF零式　登場人物</h1>
            <input type="button" class="button" value="表示">
        </div>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(function () {
-     var isCliked=false;
-    $('.button').click(function () {
-        if(isCliked==true){
-            return;
-         }
-        isCliked=true;
     //Modern Writing Style Start--
     $.ajax({
 	url: 'json/data.json',
@@ -59,7 +59,11 @@ $(function () {
     for(var i=0; i<data.charas.length;i++){
         $(".dataList").append("<p>id: " + dataArray[i].id + "　Character: " + dataArray[i].chara + "　　(CV: " + dataArray[i].cv + ")</p>");
     }
+    
 // });
+    $('.button').click(function () {
+       $("p").toggle();
+    
 });
 });
 });

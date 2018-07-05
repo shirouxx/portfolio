@@ -71,12 +71,24 @@
   <p id="pagetop"><a href="#main_panelArea">TOP</a></p>
   
 <script>
-var i= 1;
-var countup=function(){
+$(function(){
+  var i= 1;
+  setInterval(function(){
   var x = i++;
-  var count=document.getElementById('count').innerHTML=Math.floor(x/60)+"分"+(x%60)+"秒経過";
-};
-  setInterval(countup, 1000);
+  var m = Math.floor(x/60)+"分";
+  var s = (x%60)+"秒";
+  var past = "経過";
+  var time=0;
+  if(x%60==0){
+    time=m+past;
+  } else if(x%60<60 && x/60>1){
+    time=m+s+past;
+  } else{
+    time=s+past;
+  }
+  $("#count").html(time);
+},1000);
+});
 </script>
 </body>
 </html>
