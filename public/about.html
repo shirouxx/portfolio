@@ -74,7 +74,7 @@
               </div>
               <p id="pagetop"><a href="content_gArea">TOP</a></p>
   <script>
- function initMap() {
+ window.onload=function initMap() {
       var mapPosition = {lat: 33.865404, lng: 130.794910};
       var mapArea = document.getElementById('maps');
       var mapOptions = {
@@ -82,7 +82,7 @@
         zoom: 16,
       };
       var map = new google.maps.Map(mapArea, mapOptions);
-    }
+    };
   </script>
  </body>
  </html>
