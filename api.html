@@ -22,7 +22,7 @@ $(function(){
             	}).done(function(data){
             	    var num=1;
             	   for(var i=0; i<data.results.length;i++){
-                    $("#display").append("<tr><td>"+num+"<tr><td>"+data.results[i].releaseDate+"<tr><td>"+data.results[i].trackName);
+                    $("#display").append("<tr><td>"+num+"<tr><td>"+"<img src="+data.results[i].artworkUrl30+">"+"<tr><td>"+data.results[i].trackName);
                      num++;
                      }
                      console.log(data);

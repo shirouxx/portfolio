@@ -9,13 +9,17 @@
         }
         h1{
             font-size:16px;
+            color:#8c9398;
         }
         .dataList{
             float:left;
             font-size:14px;
             color:#8c9398;
+            margin-left:0px;
+            width:1280px;
         }
         .button{
+            float:left;
             background-color: #e7e7e7; 
             border: none;
             color: black;
@@ -29,43 +33,39 @@
             border-radius:5px;
         }
         p{
-            display:none;
+            display:block;
         }
     </style>
 </head>
    <body>
-       <div class="dataList">
+       <div class="container">
            <h1>FF零式　登場人物</h1>
-           <p class="display"></p>
-           <input type="button" class="button" value="表示">
-       </div>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    　      <input type="button" class="button" value="表示">
+    　 </div>
+           <div class="dataList">
+           </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(function () {
-    var flag=true;
+    flag=true;
     $('.button').click(function () {
-         //Modern Writing Style Start--
-        
-	    if(flag===true){
-	        console.log(data);
-	        console.log(flag);
 	        $.ajax({
             	url: 'json/data.json',
             	dataType: 'json',
             	data: {name: 'chara'},
             	}).done(function(data){
+        if(flag){
             var dataArray = data.charas;
             for(var i=0; i<data.charas.length;i++){
-            $(".dataList").append("id: " + dataArray[i].id + "　Character: " + dataArray[i].chara + "　　(CV: " + dataArray[i].cv + ")");
+            $(".dataList").append("<p>id: " + dataArray[i].id + "　Character: " + dataArray[i].chara + " (CV: " + dataArray[i].cv + ")</p>");
             }
             flag=false;
-         });
-         }else if(flag===false){
-             console.log(flag);
-             $(".disply").empty();
+        }else if(flag===false){
+             $(".dataList").empty();
              flag=true;
          }
        //$("p").toggle();
+    	});
 });
 });
 </script>
