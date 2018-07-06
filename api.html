@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script></script>
+    <title>Document</title>
+</head>
+<body>
+    <img src=https://is2-ssl.mzstatic.com/image/thumb/Music/v4/57/97/ff/5797ff38-0680-cd6b-7a0d-29cbc34cf368/source/100x100bb.jpg>
+    <p id="display"> </p>
+<script>
+// document.getElementById(idImage).src = "images/" + imageName + ".jpg";
+$(function(){
+    console.log("data");
+    $.ajax({
+                type: 'GET',
+            	url: 'https://itunes.apple.com/search?term=井上陽水&lang=ja_jp&country=JP&media=music&limit=100',
+            	dataType: 'jsonp',
+            	}).done(function(data){
+            	    var num=1;
+            	   for(var i=0; i<data.results.length;i++){
+                    $("#display").append("<tr><td>"+num+"<tr><td>"+data.results[i].releaseDate+"<tr><td>"+data.results[i].trackName);
+                     num++;
+                     }
+                     console.log(data);
+            	});
+});   	
+</script>
+</body>
+</html>

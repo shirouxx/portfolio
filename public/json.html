@@ -50,22 +50,22 @@ $(function () {
 	        console.log(data);
 	        console.log(flag);
 	        $.ajax({
-	url: 'json/data.json',
-	dataType: 'json',
-	data: {name: 'chara'},
-	}).done(function(data){
+            	url: 'json/data.json',
+            	dataType: 'json',
+            	data: {name: 'chara'},
+            	}).done(function(data){
             var dataArray = data.charas;
             for(var i=0; i<data.charas.length;i++){
             $(".dataList").append("id: " + dataArray[i].id + "　Character: " + dataArray[i].chara + "　　(CV: " + dataArray[i].cv + ")");
             }
             flag=false;
-         } else if(flag===false){
+         });
+         }else if(flag===false){
              console.log(flag);
              $(".disply").empty();
              flag=true;
          }
        //$("p").toggle();
-});
 });
 });
 </script>

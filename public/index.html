@@ -4,27 +4,11 @@
   <meta charset="utf-8">
   <meta name="desctipriton" content ="Natsuki Shuto's portfolio">
   <title>Nasuki Shuto</title>
-  <link href="css/reset.css" rel="stylesheet">
+  <!--<link href="css/reset.css" rel="stylesheet">-->
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300" rel="stylesheet" type="text/css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-  $(document).ready(function() {
-  var pagetop = $('#pagetop');
-    $(window).scroll(function () {
-       if ($(this).scrollTop() > 100) {
-            pagetop.fadeIn();
-       } else {
-            pagetop.fadeOut();
-            }
-       });
-       pagetop.click(function () {
-           $('body, html').animate({ scrollTop: 0 }, 500);
-              return false;
-   });
-});
-</script>
 </head>
 <body>
    <!-- ヘッダーここから -->
@@ -71,23 +55,39 @@
   <p id="pagetop"><a href="#main_panelArea">TOP</a></p>
   
 <script>
+  $(document).ready(function() {
+  var pagetop = $('#pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+<script>
 $(function(){
   var i= 1;
   setInterval(function(){
-  var x = i++;
-  var m = Math.floor(x/60)+"分";
-  var s = (x%60)+"秒";
-  var past = "経過";
-  var time=0;
-  if(x%60==0){
-    time=m+past;
-  } else if(x%60<60 && x/60>1){
-    time=m+s+past;
-  } else{
-    time=s+past;
-  }
-  $("#count").html(time);
-},1000);
+    var x = i++;
+    var m = Math.floor(x/60)+"分";
+    var s = (x%60)+"秒";
+    var past = "経過";
+    var time=0;
+    if(x%60==0){
+      time=m+past;
+    } else if(x%60<60 && x/60>1){
+      time=m+s+past;
+    } else{
+      time=s+past;
+    }
+    $("#count").html(time);
+  },1000);
 });
 </script>
 </body>
