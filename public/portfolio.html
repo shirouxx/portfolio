@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Nasuki Shuto</title>
+  <!--<link href="css/reset.css" rel="stylesheet">-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300" rel="stylesheet" type="text/css">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="header">
+	<div id="headerArea">
+		<div id="header_logo"><a style="color:#8c9398;,text-decoration:none" href="index.html">My portfolio</a></div>
+			<!-- グローバルナビゲーションここから -->
+		<div id="gnavi">
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="https://qiita.com/shiroux" target="_blank">Blog</a></li>
+				<li><a href="mailto:summerdream0715@gmail.com">Contact</a></li>
+			</ul>
+		</div>
+  </div>
+  </div>
+
+    <div class="content_g clearfix">
+      <div class="content_gArea">
+        <h1 class="inner-title">Portfolio</h1>
+        <div class="portfolio">
+        <ul>
+          <li><a href = "https://profile-shirou.herokuapp.com/" target = "_blank">Profile</a> ログイン機能を備えたプロフィールサイトです。</li>
+          <li><a href = "https://club-activity.herokuapp.com/" target = "_blank">Circle</a> 部活動に生徒を登録・表示するアプリです。</li>
+          <li><a href = "https://ec-site-death.herokuapp.com/" target = "_blank">EC-site</a> 商品の購入・登録・カスタマーのログイン機能を備えたECサイトです。</li>
+          <li>※各リンクをクリックするとHerokuのページに飛びます</li>
+        </ul>
+
+        </div>
+     </div>
+    </div>
+
+		<div class="footer">
+		<div class="container">
+			<ul class="inline-block">
+				<li><a href="about.html">About</a></li>
+				 <li><a href="json.html" target="_blank">Portfolio</a></li>
+				<li><a href="https://qiita.com/shiroux" target="_blank">Blog</a></li>
+				<li><a href="mailto:summerdream0715@gmail.com">Contact</a></li>
+			</ul>
+			<p class="copy">Copyright (C) 2018 Natsuki Shuto
+					All Rights Reserved.</p>
+		</div>
+	</div>
+	<p id="pagetop"><a href="#main_panelArea">TOP</a></p>
+
+<script>
+	$(document).ready(function() {
+	var pagetop = $('#pagetop');
+		$(window).scroll(function () {
+			 if ($(this).scrollTop() > 100) {
+						pagetop.fadeIn();
+			 } else {
+						pagetop.fadeOut();
+						}
+			 });
+			 pagetop.click(function () {
+					 $('body, html').animate({ scrollTop: 0 }, 500);
+							return false;
+	 });
+});
+</script>

@@ -86,7 +86,7 @@ body{
    line-height: 2.0em; /* 上下に半行余白の段落の高さを設定 */
    color: white; /* フォントの色を白に設定 */
  }
- 
+
 #main_container{ /*自作コンテイナーじゃー*/
  width: 1280px;
  height: auto;
@@ -97,7 +97,7 @@ body{
  #main_panelArea p{
    color: #FFF; /* フォントテキストに白色を設定します */
  }
- 
+
  h2{
   margin-bottom: 10px; /* h2タグの下部に10ピクセルの余白を設定 */
   font-size: 138.5%; /* フォントサイズを元サイズの138.5%で表示 */
@@ -113,12 +113,14 @@ body{
    background: #F8F8F8;  /* 背景色をグレーに設定 */
    border-bottom: solid 1px #EEE; /* コンテンツエリア下に1ピクセルの実線を設定 */
    height:auto; /* 高さを自動調節（この設定がないと高さが認識されない） */
+   height: 400px;
 
  }
 
  div.content_gArea {
    margin: 0 auto; /* 横幅をautoにすることでコンテンツが中央寄りに設定 */
    width: 980px; /* 横幅設定 */
+   padding-bottom: 100px;
  }
 
  div.content_gArea .main {
@@ -164,6 +166,9 @@ div.content {
     color: #8c9398;
     padding: 50px 0;
     text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    /* height: 50px; */
 }
 .footer li a:link{
  color: #a1a9b0;
@@ -249,4 +254,10 @@ ul {
 /*maps*/
 #maps{
   height: 400px;
+}
+
+.portfolio{
+  width: 1200px;
+  height: auto;
+
 }
